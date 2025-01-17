@@ -1,0 +1,18 @@
+SELECT 
+    c.nome AS "Nome do Cliente",
+    a.numero_apolice AS "Número da Apólice",
+    a.tipo AS "Tipo de Seguro",
+    a.valor_premio AS "Valor do Prêmio"
+FROM 
+    clientes c
+JOIN 
+    apolices a 
+ON 
+    c.id_cliente = a.id_cliente
+WHERE 
+    a.status = 'ativa';
+
+# Nome do Cliente	Número da Apólice	Tipo de Seguro	Valor do Prêmio
+João Silva	APL-001	Seguro de Vida	1500.00
+Maria Oliveira	APL-003	Seguro de Carro	2500.00
+
